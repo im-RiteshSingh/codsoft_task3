@@ -1,0 +1,323 @@
+body{
+    zoom: 200%;
+    text-align: center;
+    background-color: rgb(25, 25, 25);
+}
+
+.CalculatorBody{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 202px;
+    height: 300px;
+    border-radius: 5px;
+    transform: translateX(-50%) translateY(-50%);
+    overflow: hidden;
+}
+
+.CalculatorBody::before{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(102, 184, 148);
+    transform-origin: bottom right;
+    animation: animate 2s linear infinite;
+}
+
+.CalculatorBody::after{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(190, 182, 182);
+    transform-origin: bottom right;
+    animation: animate 2s linear infinite;
+    animation-delay: -3s;
+}
+
+@keyframes animate{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+
+.form{
+    position: absolute;
+    inset: 2px;
+    background-color: black;
+    overflow: hidden;
+    z-index: 10;
+    border-radius: 7%;
+}
+
+/* table{
+    border: 2px solid white;
+    text-align: center;
+} */
+
+
+input[type="button"]{
+    cursor: pointer;
+    width: 50px;
+    height: 39px;
+    background-color: rgb(64, 60, 60);
+    outline: none;
+    border-radius: 10%;
+    border-style: double;
+}
+
+/* input[type="button"]:hover{
+    background-color: rgba(51, 57, 61, 0.687);
+    border-style: unset;
+    border-radius: 10%;
+} */
+
+input[type="button"]{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    color: white;
+    border-radius: 100%;
+    width: 46px;
+    height: 46px;
+    cursor: pointer;
+    align-self: center;
+    justify-self: center;
+}
+
+input[type="text"]{
+    width: 95%;
+    height: 40px;
+    background-color: rgb(0, 0, 0);
+    outline: none;
+    border: none;
+    border-radius: 2%;
+    color: azure;
+}
+
+input[value="AC"]{
+    background-color: rgb(24, 22, 22);
+}
+
+input[value="AC"]:hover{
+    background-color: rgb(24, 22, 22);
+    border-radius: 25%;
+    zoom: 97%;
+}
+
+input[value="="]{
+    background-color: #FF9500;
+    zoom: 97%;
+}
+
+input[value="="]:hover{
+    background-color: rgb(24, 22, 22);
+    border-radius: 25%;
+    zoom: 97%;
+}
+
+input[onclick]{
+    color: rgb(250, 248, 248);
+}
+
+/* input[value="⬅"]:hover{
+    color: bisque;
+    border-radius: 20%;
+    background-color: rgb(31, 31, 31);
+} */
+
+/* input[type="submit"]{
+    text-align: center;
+    border-radius: 3px solid;
+    width: 220px;
+    height: 30px;
+    background-color: #4f788e;
+    color: rgb(254, 254, 254);
+} */
+
+input[value="×"]{
+    background-color: #FF9500;
+}
+
+input[value="×"]:hover{
+    border-radius: 40%;
+}
+
+input[value="÷"]{
+    background-color: #FF9500;
+}
+
+input[value="÷"]:hover{
+    border-radius: 40%;
+}
+
+input[value="+"]{
+    background-color: #FF9500;
+}
+
+input[value="+"]:hover{
+    border-radius: 40%;
+}
+
+input[value="-"]{
+    background-color: #FF9500;
+}
+
+input[value="-"]:hover{
+    border-radius: 40%;
+}
+
+input[value="("]{
+    background-color: #505050;
+    color: black;
+}
+
+input[value="("]:hover{
+    background-color: #363636;
+}
+
+input[value=")"]{
+    background-color: #505050;
+    color: black;
+}
+
+input[value=")"]:hover{
+    background-color: #363636;
+}
+
+input[value="⬅"]{
+    background-color: #505050;
+    color: black;
+}
+
+input[value="⬅"]:hover{
+    background-color: #363636;
+}
+
+input[value="%"]{
+    background-color: #505050;
+}
+
+input[value="9"]{
+    background-color: #1C1C1C;
+}
+
+input[value="9"]:hover{
+    background-color: #323232;
+    border-radius: 45px;
+    zoom: 95%;
+}
+input[value="8"]{
+    background-color: #1C1C1C;
+}
+
+input[value="8"]:hover{
+    background-color: #323232;
+    border-radius: 45px;
+    zoom: 95%;
+}
+
+
+input[value="7"]{
+    background-color: #1C1C1C;
+}
+
+input[value="7"]:hover{
+    background-color: #323232;
+    border-radius: 45px;
+    zoom: 95%;
+}
+
+input[value="6"]{
+    background-color: #1C1C1C;
+}
+
+input[value="6"]:hover{
+    background-color: #323232;
+    border-radius: 45px;
+    zoom: 95%;
+}
+
+input[value="5"]{
+    background-color: #1C1C1C;
+}
+
+input[value="5"]:hover{
+    background-color: #323232;
+    border-radius: 45px;
+    zoom: 95%;
+}
+
+input[value="4"]{
+    background-color: #1C1C1C;
+}
+
+input[value="4"]:hover{
+    background-color: #323232;
+    border-radius: 45px;
+    zoom: 95%;
+}
+
+input[value="3"]{
+    background-color: #1C1C1C;
+}
+
+input[value="3"]:hover{
+    background-color: #323232;
+    border-radius: 45px;
+    zoom: 95%;
+}
+
+input[value="2"]{
+    background-color: #1C1C1C;
+}
+
+input[value="2"]:hover{
+    background-color: #323232;
+    border-radius: 45px;
+    zoom: 95%;
+}
+
+input[value="1"]{
+    background-color: #1C1C1C;
+}
+
+input[value="1"]:hover{
+    background-color: #323232;
+    border-radius: 45px;
+    zoom: 95%;
+}
+
+input[value="."]{
+    background-color: #1C1C1C;
+}
+
+input[value="."]:hover{
+    background-color: #323232;
+    border-radius: 45px;
+    zoom: 95%;
+}
+
+input[value="0"]{
+    background-color: #1C1C1C;
+    /* width: 100px;
+    border-radius: 55px;
+    grid-column: span 2; */
+}
+
+input[value="0"]:hover{
+    background-color: #323232;
+    border-radius: 45px;
+    zoom: 95%;
+}
